@@ -1,12 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
 import "../styles/Hero.css";
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
 
-      <Navbar />
 
       <div className="hero-content">
 
@@ -25,7 +23,7 @@ const Hero = () => {
         </p>
 
         <a href="#register" className="hero-register">
-          REGISTER NOW <span>↗</span>
+          REGISTER NOW <span></span>
         </a>
 
         <div className="hero-highlights">

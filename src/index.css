@@ -17,3 +17,19 @@ body {
   overflow-x: hidden;
   font-family: 'Cinzel', serif;
 }
+
+
+/* =================================
+   CIRCUIT RUSH CUSTOM SWORD CURSOR
+================================= */
+
+* {
+  cursor: url("/assets/cursors/sword.png") 16 16, auto !important;
+}
+
+/* Keep text editing normal */
+input,
+textarea,
+[contenteditable="true"] {
+  cursor: text !important;
+}

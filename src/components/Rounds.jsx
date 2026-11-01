@@ -61,7 +61,7 @@ function Rounds() {
         </p>
 
         <h2>
-          THE <span>ARENA</span>
+          <span>ROUNDS</span>
           <span className="heading-star"> ✦</span>
         </h2>
 
