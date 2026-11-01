@@ -1,16 +1,182 @@
-# React + Vite
+# ⚔️ CIRCUIT RUSH
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+### IEEE Technical Competition | Dr. Ambedkar Institute of Technology
 
-Currently, two official plugins are available:
+**Quiz. Debug. Build. Compete.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Circuit Rush is a three-round technical competition organized by the IEEE Student Branch of Dr. Ambedkar Institute of Technology, Bengaluru. The event challenges participants to test their electronics fundamentals, troubleshoot circuits, and build innovative working solutions within a limited time.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏰 About the Event
 
-## Expanding the Oxlint configuration
+Circuit Rush is designed to bring together students passionate about electronics, problem-solving, and innovation through a series of technical challenges.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+| Event Detail | Information |
+|---|---|
+| Event Name | Circuit Rush |
+| Organized By | IEEE Student Branch, Dr. AIT |
+| Venue | Dr. Ambedkar Institute of Technology, Bengaluru |
+| Event Dates | 24–26 September 2026 |
+| Team Size | 2 members |
+| Prize Pool | ₹1,00,000+ |
+| Rounds | 3 |
+
+## ⚡ Competition Rounds
+
+The competition consists of three technical rounds:
+
+### Round 1: Electronics Quiz
+Test your knowledge of fundamental electronics concepts through a technical quiz covering:
+- Basic Electronics
+- Analog Electronics
+- Digital Electronics
+- IoT Fundamentals
+
+### Round 2: Circuit Debugging
+Identify faults, analyze circuits, and troubleshoot real-world electronics problems.
+
+### Round 3: IoT Hackathon
+Put your technical and creative skills to the test by designing and building a working project within the given time limit.
+
+## ✨ Website Features
+
+- Gothic-inspired visual identity with a Victorian and dark fantasy aesthetic.
+- Responsive navigation with a mobile hamburger menu.
+- Dedicated sections for event information and competition rounds.
+- Custom illustrations, decorative assets, and themed backgrounds.
+- Smooth anchor-based navigation.
+- Responsive layouts for desktop and mobile devices.
+- Interactive navigation and hover effects.
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend development |
+| Vite | Development server and build tool |
+| JavaScript | Application logic |
+| CSS3 | Styling and responsive layouts |
+| Lucide React | Icons |
+| Git & GitHub | Version control |
+| Vercel | Deployment and hosting |
+
+## 📁 Project Structure
+
+```text
+circuit-rush/
+│
+├── public/
+│   └── assets/
+│       ├── backgrounds/
+│       ├── cursors/
+│       ├── decorations/
+│       └── logos/
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   └── Rounds.jsx
+│   │
+│   ├── styles/
+│   │   ├── Navbar.css
+│   │   ├── Hero.css
+│   │   ├── About.css
+│   │   └── Rounds.css
+│   │
+│   ├── App.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+*Additional components and assets may be added as development progresses.*
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Manjushree27-v/circuit-rush.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd circuit-rush
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal to view the website.
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+The production-ready files will be generated inside the `dist/` directory.
+
+## 🌐 Deployment
+
+The website is deployed using **Vercel**, with GitHub integration for continuous deployment.
+
+Every push to the connected production branch can automatically trigger a new deployment.
+
+## 🎨 Design Direction
+
+The website follows a Gothic Vampire Academia aesthetic, combining:
+
+- Parchment-inspired backgrounds.
+- Deep black and blood-red accents.
+- Victorian and medieval ornamental elements.
+- Elegant typography and dark fantasy-inspired visuals.
+- Subtle electronic and circuit-themed details.
+
+### Color Palette
+
+| Color | Hex Code |
+|---|---|
+| Parchment | `#F5E3CE` |
+| Deep Black | `#11100F` |
+| Blood Red | `#A71925` |
+| Distressed Grey | `#77736D` |
+
+---
+
+## 👩‍💻 Developed By
+
+**IEEE Student Branch, Dr. Ambedkar Institute of Technology**
+
+Website designed and developed for Circuit Rush, a technical competition celebrating electronics, creativity, and innovation.
+
+---
+
+<p align="center">
+  <b>QUIZ ✦ DEBUG ✦ BUILD</b>
+  <br/>
+  <i>One challenge. Three rounds. One champion.</i>
+</p>
