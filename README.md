@@ -17,9 +17,9 @@ Circuit Rush is designed to bring together students passionate about electronics
 | Event Name | Circuit Rush |
 | Organized By | IEEE Student Branch, Dr. AIT |
 | Venue | Dr. Ambedkar Institute of Technology, Bengaluru |
-| Event Dates | 24–26 September 2026 |
+| Event Dates | Announced soon |
 | Team Size | 2 members |
-| Prize Pool | ₹1,00,000+ |
+| Prize Pool | Announced soon |
 | Rounds | 3 |
 
 ## ⚡ Competition Rounds
