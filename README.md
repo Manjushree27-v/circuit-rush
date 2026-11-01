@@ -169,7 +169,7 @@ The website follows a Gothic Vampire Academia aesthetic, combining:
 
 ## 👩‍💻 Developed By
 
-**IEEE Student Branch, Dr. Ambedkar Institute of Technology**
+**V N Manjushree, Web Master, IEEE Student Branch, Dr. Ambedkar Institute of Technology**
 
 Website designed and developed for Circuit Rush, a technical competition celebrating electronics, creativity, and innovation.
 
