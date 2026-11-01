@@ -1,0 +1,152 @@
+.hero {
+  position: relative;
+  width: 100%;
+
+  /* Maintain the original 16:9 image proportions */
+  min-height: max(100vh, 56.25vw);
+
+  background-image: url("/assets/backgrounds/hero-bg.png");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 100%;
+  padding: 200px 20px 50px;
+  transform: translateY(70px);
+}
+
+.hero-eyebrow {
+  color: #11100F;
+  font-size: 14px;
+  letter-spacing: 8px;
+  margin-bottom: 15px;
+}
+
+.hero-logo {
+  width: min(600px, 75vw);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+}
+
+
+.hero-tagline {
+  color: #11100F;
+  font-size: 13px;
+  letter-spacing: 7px;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.hero-tagline span {
+  color: #A71925;
+  margin: 0 8px;
+}
+
+/* Hexagonal Register Button */
+.hero-register {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 22px;
+  padding: 17px 55px;
+  min-width: 310px;
+
+  background: #71121B;
+  color: #E8E1D4;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+
+  border: none;
+  clip-path: polygon(
+    6% 0,
+    94% 0,
+    100% 50%,
+    94% 100%,
+    6% 100%,
+    0 50%
+  );
+
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+/* Outer dark border */
+.hero-register::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #71121B;
+  clip-path: polygon(
+    6% 0,
+    94% 0,
+    100% 50%,
+    94% 100%,
+    6% 100%,
+    0 50%
+  );
+  z-index: -2;
+}
+
+/* Inner red surface */
+.hero-register::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #A71925;
+  clip-path: polygon(
+    6% 0,
+    94% 0,
+    100% 50%,
+    94% 100%,
+    6% 100%,
+    0 50%
+  );
+  z-index: -1;
+}
+
+.hero-register:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+.hero-highlights {
+  display: flex;
+  gap: 35px;
+  margin-top: 20px; /* Reduced from 35px */
+  color: #11100F;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+/* Remove unwanted spacing after Hero */
+.hero {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  display: flex;
+  border: none;
+}
