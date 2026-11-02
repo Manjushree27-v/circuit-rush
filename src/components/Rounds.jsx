@@ -36,7 +36,7 @@ const rounds = [
   },
   {
     number: "03",
-    title: "IoT HACKATHON",
+    title: "IoT MINI HACKATHON",
     icon: Wifi,
     topics: [
       "Build a working project",

@@ -1,53 +1,57 @@
 
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
 
 const ieeeLogo = "/assets/logos/ieee-logo.png";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
- 
-const handleSmoothScroll = (event) => {
-  const href = event.currentTarget.getAttribute("href");
-  const target = document.querySelector(href);
+  const handleSmoothScroll = (event) => {
+    const href = event.currentTarget.getAttribute("href");
+    const target = document.querySelector(href);
 
-  if (!target) return;
+    if (!target) return;
 
-  event.preventDefault();
+    event.preventDefault();
 
-  // Find the actual heading inside the section
-  const heading =
-    target.querySelector(".rounds-heading, .about-heading") || target;
+    const heading =
+      target.querySelector(".rounds-heading, .about-heading") || target;
 
-  // Calculate the space occupied by the fixed navbar
-  const navbar = document.querySelector(".navbar");
-  const navbarBottom = navbar
-    ? navbar.getBoundingClientRect().bottom
-    : 0;
+    const navbar = document.querySelector(".navbar");
+    const navbarBottom = navbar
+      ? navbar.getBoundingClientRect().bottom
+      : 0;
 
-  const gap = 14;
+    const gap = 14;
 
-  // Scroll directly to the heading
-  const scrollPosition =
-    window.scrollY +
-    heading.getBoundingClientRect().top -
-    navbarBottom -
-    gap;
+    const scrollPosition =
+      window.scrollY +
+      heading.getBoundingClientRect().top -
+      navbarBottom -
+      gap;
 
-  window.scrollTo({
-    top: scrollPosition,
-    behavior: "smooth",
-  });
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth",
+    });
 
-  window.history.replaceState(null, "", href);
-};
+    window.history.replaceState(null, "", href);
 
+    // Close mobile menu after clicking a link
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
 
+      {/* BRAND */}
       <div className="navbar-brand">
-        <img src={ieeeLogo} alt="IEEE Logo" className="ieee-logo" />
+        <img
+          src={ieeeLogo}
+          alt="IEEE Logo"
+          className="ieee-logo"
+        />
 
         <span className="brand-branch">
           IEEE Student Branch
@@ -56,22 +60,43 @@ const handleSmoothScroll = (event) => {
         </span>
       </div>
 
-      <div className="navbar-links">
-        <a href="#home" onClick={handleSmoothScroll}>HOME</a>
-        <a href="#about" onClick={handleSmoothScroll}>ABOUT</a>
-        <a href="#rounds" onClick={handleSmoothScroll}>ROUNDS</a>
-        <a href="#prizes" onClick={handleSmoothScroll}>PRIZES</a>
-        <a href="#rules" onClick={handleSmoothScroll}>RULES</a>
-        <a href="#faq" onClick={handleSmoothScroll}>FAQ</a>
-      </div>
-
-      <a
-        href="#register"
-        className="navbar-register"
-        onClick={handleSmoothScroll}
+      {/* HAMBURGER BUTTON */}
+      <button
+        type="button"
+        className={`navbar-toggle ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+        aria-expanded={menuOpen}
+        aria-controls="navbar-menu"
       >
-        REGISTER NOW <span></span>
-      </a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* NAVIGATION MENU */}
+      <div
+        className={`navbar-menu ${menuOpen ? "is-open" : ""}`}
+        id="navbar-menu"
+      >
+        <div className="navbar-links">
+          <a href="#home" onClick={handleSmoothScroll}>HOME</a>
+          <a href="#about" onClick={handleSmoothScroll}>ABOUT</a>
+          <a href="#rounds" onClick={handleSmoothScroll}>ROUNDS</a>
+          <a href="#prizes" onClick={handleSmoothScroll}>PRIZES</a>
+          <a href="#rules" onClick={handleSmoothScroll}>RULES</a>
+          <a href="#faq" onClick={handleSmoothScroll}>FAQ</a>
+        </div>
+
+        <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLScbG-ysrWQvcdQLpnKavmPJlhfPkDKjlxeV-CnGe0WU9XYZ7Q/viewform?usp=dialog"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="navbar-register"
+>
+  REGISTER NOW <span></span>
+</a>
+      </div>
 
     </nav>
   );

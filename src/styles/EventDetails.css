@@ -1,0 +1,246 @@
+
+/* =================================
+   EVENT DETAILS
+================================= */
+
+.event-details-section {
+  position: relative;
+  width: 100%;
+  min-height: 340px;
+  box-sizing: border-box;
+
+  background-image: url("/assets/backgrounds/event-details-bg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px 7%;
+  color: #211710;
+}
+
+.event-details-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Heading */
+
+.event-details-heading {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(27px, 2.5vw, 36px);
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #211710;
+
+  margin: 0 0 30px;
+}
+
+.event-details-heading span {
+  color: #A71925;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Four columns */
+
+.event-details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  width: 100%;
+}
+
+.event-detail {
+  min-height: 105px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 15px;
+  border-right: 1px solid rgba(35, 30, 25, 0.3);
+}
+
+.event-detail:last-child {
+  border-right: none;
+}
+
+/* Outline icons */
+
+.event-detail svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 9px;
+  color: #211710;
+}
+
+/* Labels */
+
+.event-detail h3 {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #211710;
+  margin: 0 0 8px;
+}
+
+/* Information */
+
+.event-detail p {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: #40352D;
+  margin: 0;
+}
+
+/* =================================
+   TABLET AND MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+  .event-details-section {
+    min-height: 0;
+    padding: 45px 9%;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .event-details-heading {
+    font-size: 26px;
+    margin-bottom: 22px;
+  }
+
+  .event-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .event-detail {
+    min-height: 120px;
+    padding: 18px 8px;
+    border-right: none;
+    border-bottom: 1px solid rgba(35, 30, 25, 0.3);
+  }
+
+  .event-detail:nth-child(odd) {
+    border-right: 1px solid rgba(35, 30, 25, 0.3);
+  }
+
+  .event-detail:nth-child(3),
+  .event-detail:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .event-detail svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .event-detail h3 {
+    font-size: 11px;
+  }
+
+  .event-detail p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .event-details-section {
+    padding: 35px 6%;
+  }
+
+  .event-details-heading {
+    font-size: 22px;
+  }
+
+  .event-detail p {
+    font-size: 10px;
+  }
+}
+
+
+/* =================================
+   INCREASE EVENT DETAILS TYPOGRAPHY
+================================= */
+
+.event-details-heading {
+  font-size: clamp(38px, 3.2vw, 48px);
+  letter-spacing: 3px;
+  margin-bottom: 38px;
+}
+
+.event-details-heading span {
+  font-size: 25px;
+}
+
+.event-detail {
+  min-height: 135px;
+  padding: 15px 18px;
+}
+
+.event-detail svg {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
+}
+
+.event-detail h3 {
+  font-size: 17px;
+  letter-spacing: 2.5px;
+  margin-bottom: 10px;
+}
+
+.event-detail p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Tablet and mobile */
+@media (max-width: 768px) {
+  .event-details-heading {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .event-detail svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .event-detail h3 {
+    font-size: 14px;
+  }
+
+  .event-detail p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .event-details-heading {
+    font-size: 25px;
+  }
+
+  .event-detail h3 {
+    font-size: 12px;
+  }
+
+  .event-detail p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,390 @@
+/* =================================
+   PRIZES SECTION
+================================= */
+
+.prizes-section {
+  position: relative;
+  width: 100%;
+  min-height: 850px;
+
+  background-image: url("/assets/backgrounds/prizes-bg.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 75px 5%;
+  box-sizing: border-box;
+
+  color: #211710;
+  overflow: hidden;
+}
+
+.prizes-content {
+  width: 100%;
+  max-width: 1150px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+
+.prizes-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.prizes-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: 4px;
+  margin: 0;
+  color: #211710;
+}
+
+.prizes-heading h2 span {
+  color: #A71925;
+}
+
+.prizes-heading p {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: #77736D;
+  margin-top: 10px;
+}
+
+/* Prize Pool */
+
+.prize-pool {
+  text-align: center;
+  margin: 25px auto 35px;
+  padding: 15px;
+  max-width: 420px;
+
+  border-top: 1px solid rgba(35, 30, 25, 0.4);
+  border-bottom: 1px solid rgba(35, 30, 25, 0.4);
+}
+
+.pool-label {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #77736D;
+}
+
+.prize-pool h3 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 58px);
+  color: #A71925;
+  margin: 5px 0;
+  letter-spacing: 3px;
+}
+
+.prize-pool p {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+/* Prize Cards */
+
+.prize-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: 25px auto;
+}
+
+.prize-card {
+  flex: 1;
+  max-width: 280px;
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 25px 15px;
+  box-sizing: border-box;
+
+  background: rgba(245, 230, 207, 0.55);
+  border: 1px solid rgba(35, 30, 25, 0.55);
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.10),
+    inset 0 0 15px rgba(80, 50, 30, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prize-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.18),
+    0 0 12px rgba(167, 25, 37, 0.2);
+}
+
+.prize-card.first {
+  min-height: 310px;
+  max-width: 300px;
+  border: 2px solid rgba(167, 25, 37, 0.65);
+}
+
+.prize-icon {
+  font-size: 65px;
+  line-height: 1;
+  margin-bottom: 15px;
+  color: #211710;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.prize-card.first .prize-icon {
+  font-size: 82px;
+  color: #A71925;
+}
+
+.prize-card h3 {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  font-weight: 500;
+  margin: 0;
+  color: #211710;
+}
+
+.prize-card.first h3 {
+  font-size: 43px;
+  color: #A71925;
+}
+
+.prize-card h4 {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.prize-card-divider {
+  width: 80%;
+  height: 1px;
+  background: rgba(35, 30, 25, 0.35);
+  margin: 17px 0;
+  position: relative;
+}
+
+.prize-card-divider span {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 10px;
+  background: #F0DEC7;
+  color: #A71925;
+}
+
+.prize-card p {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Decorative Divider */
+
+.prizes-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 30px;
+  max-width: 900px;
+  height: 1px;
+  background: rgba(35, 30, 25, 0.4);
+}
+
+.prizes-divider span {
+  background: #EBD9C2;
+  color: #A71925;
+  padding: 0 15px;
+  font-size: 20px;
+}
+
+/* Additional Rewards */
+
+/* Additional Rewards */
+
+.additional-rewards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: auto;
+}
+
+.reward-item {
+  text-align: center;
+  padding: 22px 20px;
+  border-right: 1px solid rgba(35, 30, 25, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.reward-item:last-child {
+  border-right: none;
+}
+
+.reward-item:hover {
+  transform: translateY(-6px);
+}
+
+.reward-icon {
+  font-size: 48px;
+  font-weight: 700;
+  color: #A71925;
+  margin-bottom: 14px;
+}
+
+.reward-item h4 {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  letter-spacing: 0.7px;
+  color: #211710;
+  text-shadow: 0 0 5px rgba(255, 245, 225, 0.9);
+}
+
+.reward-item p {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #49372C;
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+  .prizes-section {
+    min-height: auto;
+    padding: 90px 6%;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .prizes-heading h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .prizes-heading p {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .prize-pool {
+    margin: 25px auto;
+  }
+
+  .prize-cards {
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .prize-card {
+    min-height: 200px;
+    padding: 15px 8px;
+  }
+
+  .prize-card.first {
+    min-height: 230px;
+  }
+
+  .prize-icon {
+    font-size: 38px;
+  }
+
+  .prize-card.first .prize-icon {
+    font-size: 48px;
+  }
+
+  .prize-card h3 {
+    font-size: 25px;
+  }
+
+  .prize-card.first h3 {
+    font-size: 30px;
+  }
+
+  .prize-card h4 {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .prize-card p {
+    font-size: 10px;
+  }
+
+  .additional-rewards {
+    gap: 0;
+  }
+
+  .reward-item {
+  padding: 15px 7px;
+}
+
+.reward-icon {
+  font-size: 34px;
+}
+
+.reward-item h4 {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.reward-item p {
+  font-size: 10px;
+}
+}
+
+@media (max-width: 420px) {
+
+  .prize-cards {
+    gap: 7px;
+  }
+
+  .prize-card {
+    padding: 12px 5px;
+    min-height: 185px;
+  }
+
+  .prize-card.first {
+    min-height: 210px;
+  }
+
+  .prize-card h3 {
+    font-size: 22px;
+  }
+
+  .prize-card.first h3 {
+    font-size: 27px;
+  }
+
+  .prize-card p {
+    font-size: 9px;
+  }
+
+  .reward-item h4 {
+    font-size: 10px;
+  }
+}

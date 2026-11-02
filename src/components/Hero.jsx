@@ -22,9 +22,14 @@ const Hero = () => {
           QUIZ <span>✦</span> DEBUG <span>✦</span> BUILD
         </p>
 
-        <a href="#register" className="hero-register">
-          REGISTER NOW <span></span>
-        </a>
+        <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLScbG-ysrWQvcdQLpnKavmPJlhfPkDKjlxeV-CnGe0WU9XYZ7Q/viewform?usp=dialog"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hero-register"
+>
+  REGISTER NOW <span></span>
+</a>
 
         <div className="hero-highlights">
           <span>50 TEAMS</span>

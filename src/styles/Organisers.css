@@ -1,0 +1,329 @@
+/* =========================================
+   ORGANISERS SECTION
+========================================= */
+
+.organisers-section {
+  position: relative;
+  width: 100%;
+  padding: 85px 6%;
+  box-sizing: border-box;
+
+  background-image: url("/assets/backgrounds/rounds-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #211710;
+  overflow: hidden;
+}
+
+.organisers-container {
+  width: 100%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.organisers-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.organisers-heading > span {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #655448;
+  margin-bottom: 12px;
+}
+
+.organisers-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 5vw, 64px);
+  letter-spacing: 3px;
+  margin: 0;
+  color: #11100F;
+}
+
+.organisers-heading h2 span {
+  color: #A71925;
+}
+
+.organisers-divider {
+  width: 75%;
+  height: 1px;
+  background: rgba(35, 30, 25, 0.4);
+  margin: 25px auto 0;
+  position: relative;
+}
+
+.organisers-divider span {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  background: #A71925;
+  transform: rotate(45deg);
+  top: -4px;
+  left: 50%;
+}
+
+/* =========================================
+   ORGANISATION LOGOS
+========================================= */
+
+.organisations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 22px;
+
+  margin: 0 auto 75px;
+}
+
+.organisation-card {
+  height: 115px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 248, 235, 0.72);
+  border: 1px solid rgba(55, 35, 25, 0.4);
+
+  box-shadow: 0 4px 12px rgba(40, 25, 15, 0.08);
+
+  transition: transform 0.3s ease;
+}
+
+.organisation-card:hover {
+  transform: translateY(-4px);
+}
+
+.organisation-card img {
+  display: block;
+  max-width: 85%;
+  max-height: 75%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================================
+   CONTACT HEADING
+========================================= */
+
+.organisers-contact-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.organisers-contact-heading h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin: 0 0 8px;
+  color: #211710;
+}
+
+.organisers-contact-heading p {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  color: #655448;
+  margin: 0;
+}
+
+/* =========================================
+   CONTACT CARDS
+========================================= */
+
+.organisers-contact-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.organiser-card {
+  width: 260px;
+  padding: 23px 20px;
+
+  background: #211710;
+  border: 1px solid #A71925;
+  border-bottom: 4px solid #A71925;
+
+  text-align: center;
+  box-sizing: border-box;
+
+  transition: transform 0.3s ease;
+}
+
+.organiser-card:hover {
+  transform: translateY(-5px);
+}
+
+.organiser-card h3 {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  letter-spacing: 2px;
+  color: #F5E3CE;
+  margin: 0 0 13px;
+}
+
+.organiser-card a {
+  display: inline-block;
+  color: #F5E3CE;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
+
+  border-bottom: 1px solid #A71925;
+  padding-bottom: 5px;
+
+  transition: color 0.3s ease;
+}
+
+.organiser-card a:hover {
+  color: #D94A55;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .organisers-container {
+    max-width: 750px;
+  }
+
+  .organisations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .organisation-card {
+    height: 120px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .organisers-section {
+    padding: 65px 7%;
+    background-position: center;
+  }
+
+  .organisers-heading {
+    margin-bottom: 38px;
+  }
+
+  .organisers-heading h2 {
+    font-size: 38px;
+    letter-spacing: 1px;
+  }
+
+  .organisers-heading > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .organisations-grid {
+    gap: 14px;
+    margin-bottom: 55px;
+  }
+
+  .organisation-card {
+    height: 105px;
+    padding: 10px;
+  }
+
+  .organisation-card img {
+    max-width: 90%;
+    max-height: 75%;
+  }
+
+  .organisers-contact-heading h3 {
+    font-size: 23px;
+  }
+
+  .organiser-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .organisations-grid {
+    gap: 10px;
+  }
+
+  .organisation-card {
+    height: 90px;
+    padding: 7px;
+  }
+
+  .organisers-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* ALIGN ALL FOUR ORGANISATION LOGOS */
+.organisations-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr 1fr 1fr;
+  align-items: stretch;
+  gap: 22px;
+}
+
+.organisation-card {
+  width: 100%;
+  height: 145px;
+  padding: 12px;
+  justify-self: stretch;
+}
+
+.organisation-card:first-child {
+  width: 100%;
+  height: 145px;
+}
+
+.organisation-card img {
+  max-width: 90%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .organisations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .organisation-card,
+  .organisation-card:first-child {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+.organiser-card:first-child h3 {
+  white-space: nowrap;
+  font-size: 20px;
+  letter-spacing: 1px;
+}

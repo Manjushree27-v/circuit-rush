@@ -386,7 +386,7 @@
 /* Round 03: Sword */
 
 .sword-decoration {
-  width: 175px;
+  width: 135px; /* Was 175px */
   right: -5px;
   bottom: 90px;
 }

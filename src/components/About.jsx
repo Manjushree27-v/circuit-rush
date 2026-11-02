@@ -33,6 +33,7 @@ const About = () => {
         {/* Statistics */}
         <div className="about-stats">
 
+          {/* Teams */}
           <div className="stat-item">
             <svg viewBox="0 0 48 48" fill="none">
               <path
@@ -57,54 +58,28 @@ const About = () => {
             <p>TEAMS</p>
           </div>
 
+          {/* Rounds */}
           <div className="stat-item">
             <svg viewBox="0 0 48 48" fill="none">
-              <circle
-                cx="24"
-                cy="24"
-                r="18"
-                stroke="currentColor"
-                strokeWidth="2.5"
-              />
-              <circle
-                cx="24"
-                cy="24"
-                r="11"
-                stroke="currentColor"
-                strokeWidth="2.5"
-              />
-              <circle
-                cx="24"
-                cy="24"
-                r="4"
-                stroke="currentColor"
-                strokeWidth="2.5"
-              />
+              <circle cx="24" cy="24" r="18"
+                stroke="currentColor" strokeWidth="2.5" />
+              <circle cx="24" cy="24" r="11"
+                stroke="currentColor" strokeWidth="2.5" />
+              <circle cx="24" cy="24" r="4"
+                stroke="currentColor" strokeWidth="2.5" />
             </svg>
 
             <h3>3</h3>
             <p>ROUNDS</p>
           </div>
 
+          {/* Champion */}
           <div className="stat-item">
             <svg viewBox="0 0 48 48" fill="none">
-              <rect
-                x="12"
-                y="12"
-                width="24"
-                height="24"
-                rx="3"
-                stroke="currentColor"
-                strokeWidth="2.5"
-              />
-              <rect
-                x="19"
-                y="19"
-                width="10"
-                height="10"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
+              <rect x="12" y="12" width="24" height="24" rx="3"
+                stroke="currentColor" strokeWidth="2.5" />
+              <rect x="19" y="19" width="10" height="10"
+                stroke="currentColor" strokeWidth="2" />
               <path
                 d="M18 5v7m12-7v7M18 36v7m12-7v7M5 18h7m-7 12h7m24-12h7m-7 12h7"
                 stroke="currentColor"

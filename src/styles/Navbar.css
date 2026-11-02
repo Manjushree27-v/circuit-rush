@@ -1,3 +1,8 @@
+
+/* =================================
+   NAVBAR BASE
+================================= */
+
 .navbar {
   position: fixed;
   top: 12px;
@@ -6,8 +11,6 @@
 
   width: 88%;
   height: 62px;
-  min-height: 62px;
-
   padding: 0 25px;
   box-sizing: border-box;
 
@@ -20,28 +23,24 @@
   border-radius: 15px;
 
   box-shadow: 0 5px 18px rgba(50, 25, 15, 0.12);
-
   z-index: 1000;
-  transition: box-shadow 0.3s ease;
 }
 
-.navbar:hover {
-  box-shadow: 0 8px 22px rgba(50, 25, 15, 0.2);
-}
+/* =================================
+   BRAND
+================================= */
 
-/* Logo */
-.ieee-logo {
-  width: 110px;
-  height: 48px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-/* Brand */
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
+}
+
+.ieee-logo {
+  width: 110px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .brand-branch {
@@ -52,7 +51,26 @@
   padding-left: 12px;
 }
 
-/* Navigation links */
+/* Desktop and mobile branch text */
+
+.branch-desktop {
+  display: inline;
+}
+
+.branch-mobile {
+  display: none;
+}
+
+/* =================================
+   NAVIGATION
+================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
 .navbar-links {
   display: flex;
   align-items: center;
@@ -63,16 +81,14 @@
   position: relative;
   text-decoration: none;
   color: #211710;
-
   font-size: 13px;
   letter-spacing: 1.5px;
   font-weight: 600;
-
   padding: 8px 0;
-  transition: color 0.3s ease;
 }
 
-/* Hover underline */
+/* Animated underline */
+
 .navbar-links a::after {
   content: "";
   position: absolute;
@@ -81,8 +97,8 @@
 
   width: 0;
   height: 2px;
-  background: #A71925;
 
+  background: #A71925;
   transition: width 0.3s ease;
 }
 
@@ -94,24 +110,234 @@
   width: 100%;
 }
 
-/* Register button */
-.navbar-register {
-  text-decoration: none;
+/* =================================
+   REGISTER BUTTON
+================================= */
+
+.navbar .navbar-menu > a.navbar-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 175px;
+  min-height: 48px;
+  padding: 11px 24px;
+
+  box-sizing: border-box;
+  flex-shrink: 0;
+
   background: #A71925;
   color: #F5E3CE;
 
-  padding: 11px 20px;
+  font-family: Georgia, serif;
   font-size: 12px;
+  font-weight: 500;
   letter-spacing: 1px;
 
-  border: 1px solid #211710;
-  border-radius: 8px;
+  text-decoration: none;
 
-  transition: all 0.3s ease;
+  border: 1px solid #211710;
+  border-radius: 10px !important;
+
+  clip-path: none !important;
+  -webkit-clip-path: none !important;
+
+  outline: none;
+  box-shadow: none;
+
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.navbar-register:hover {
+.navbar .navbar-menu > a.navbar-register:hover {
   background: #211710;
   color: #F5E3CE;
   transform: translateY(-2px);
+}
+
+/* =================================
+   HAMBURGER
+================================= */
+
+.navbar-toggle {
+  display: none;
+}
+
+/* =================================
+   CENTER DESKTOP NAVIGATION
+================================= */
+
+@media screen and (min-width: 769px) {
+
+  .navbar-menu {
+    flex: 1;
+    justify-content: space-between;
+    margin-left: 35px;
+  }
+
+  .navbar-links {
+    margin: 0 auto;
+  }
+
+}
+
+/* =================================
+   MOBILE NAVBAR
+================================= */
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    top: 12px;
+    width: calc(100% - 32px);
+    height: 64px;
+
+    padding: 0 14px;
+    border-radius: 22px;
+
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    gap: 8px;
+  }
+
+  .ieee-logo {
+    width: 76px;
+    height: 42px;
+  }
+
+  .brand-branch {
+    white-space: nowrap;
+    font-size: 8px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding-left: 9px;
+  }
+
+  /* Hamburger button */
+
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 42px;
+    height: 42px;
+    padding: 5px;
+
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+  }
+
+  .navbar-toggle span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: #211710;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  /* Hamburger animation */
+
+  .navbar-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Dropdown */
+
+  .navbar-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+
+    padding: 16px;
+
+    background: #F5E3CE;
+    border: 1px solid rgba(75, 43, 29, 0.25);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 22px rgba(50, 25, 15, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-8px);
+    transition: 0.3s ease;
+  }
+
+  .navbar-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .navbar-links a {
+    padding: 13px 5px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(75, 43, 29, 0.15);
+  }
+
+  /* Mobile register button */
+
+  .navbar .navbar-menu > a.navbar-register {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+
+    justify-content: center;
+    text-align: center;
+
+    padding: 13px 15px;
+    border-radius: 10px !important;
+  }
+}
+
+/* =================================
+   VERY SMALL PHONES
+================================= */
+
+@media screen and (max-width: 380px) {
+
+  .ieee-logo {
+    width: 68px;
+  }
+
+  .brand-branch {
+    font-size: 7px;
+    letter-spacing: 0.7px;
+  }
+
 }

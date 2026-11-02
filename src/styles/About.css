@@ -1,3 +1,8 @@
+
+/* =================================
+   ABOUT SECTION
+================================= */
+
 .about-section {
   position: relative;
   width: 100vw;
@@ -17,11 +22,12 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+
   color: #171411;
   isolation: isolate;
 }
 
-/* Seam blending at the top */
+/* Top seam blending */
 .about-section::before {
   content: "";
   position: absolute;
@@ -46,7 +52,10 @@
   width: 65%;
   max-width: 1100px;
   margin-left: 0;
+
   padding: 55px 0 45px 8%;
+  box-sizing: border-box;
+
   z-index: 2;
 }
 
@@ -80,8 +89,10 @@
   width: 100%;
   max-width: 780px;
   height: 1px;
+
   background: rgba(35, 30, 25, 0.45);
   margin: 32px 0 25px;
+
   position: relative;
 }
 
@@ -107,6 +118,7 @@
 
   margin: 35px 0 35px;
   padding: 22px 15px;
+  box-sizing: border-box;
 
   background: rgba(245, 230, 207, 0.72);
   border: 1px solid rgba(35, 25, 20, 0.55);
@@ -127,7 +139,6 @@
   justify-content: center;
 
   text-align: center;
-
   border-right: 1px solid rgba(35, 30, 25, 0.3);
 
   padding: 15px 10px;
@@ -180,12 +191,34 @@
   font-family: Georgia, serif;
   font-size: 13px;
   letter-spacing: 1.5px;
-  font-weight: 600;
+  font-weight: 700;
   color: #30251F;
   white-space: nowrap;
+
+  text-shadow:
+    0 0 3px rgba(255, 244, 220, 1),
+    0 0 7px rgba(255, 235, 205, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.7);
+
+  transition: all 0.3s ease;
 }
 
-/* Responsive */
+.about-footer span:hover {
+  color: #A71925;
+
+  text-shadow:
+    0 0 4px #FFF0D8,
+    0 0 9px #FFF0D8,
+    0 0 16px rgba(167, 25, 37, 0.8),
+    0 0 24px rgba(167, 25, 37, 0.5);
+
+  transform: translateY(-2px);
+}
+
+/* =================================
+   TABLET AND MOBILE
+================================= */
+
 @media (max-width: 768px) {
   .about-section {
     height: auto;
@@ -213,6 +246,27 @@
 
   .about-stats {
     max-width: 100%;
+    padding: 12px 5px;
+    margin: 25px 0;
+  }
+
+  .stat-item {
+    padding: 10px 4px;
+  }
+
+  .stat-item svg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 7px;
+  }
+
+  .stat-item h3 {
+    font-size: 27px;
+  }
+
+  .stat-item p {
+    font-size: 11px;
+    letter-spacing: 1px;
   }
 
   .about-footer {
@@ -222,6 +276,8 @@
 
   .about-footer span {
     font-size: 9px;
+    white-space: normal;
+    text-align: center;
   }
 }
 
@@ -235,8 +291,12 @@
   }
 
   .stat-item svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
+  }
+
+  .stat-item h3 {
+    font-size: 24px;
   }
 
   .about-footer {
