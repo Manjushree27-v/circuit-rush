@@ -71,6 +71,19 @@ const EventDetails = () => {
             <p>BE / B.Tech Students<br />(All Branches)</p>
           </div>
 
+          {/* REGISTRATION FEE */}
+          <div className="event-detail">
+            <div className="event-detail-rupee">₹</div>
+            <h3>REGISTRATION FEE</h3>
+            <p>
+              ₹200 PER TEAM
+              <br />
+              <span className="fee-discount">
+                ₹150 for IEEE Members
+              </span>
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

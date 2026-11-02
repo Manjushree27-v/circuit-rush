@@ -18,13 +18,13 @@
   align-items: center;
   justify-content: center;
 
-  padding: 35px 7%;
+  padding: 35px 5%;
   color: #211710;
 }
 
 .event-details-content {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -33,32 +33,34 @@
 
 .event-details-heading {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(27px, 2.5vw, 36px);
+  font-size: clamp(38px, 3.2vw, 48px);
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   color: #211710;
 
-  margin: 0 0 30px;
+  margin: 0 0 38px;
 }
 
 .event-details-heading span {
   color: #A71925;
-  font-size: 20px;
+  font-size: 25px;
   vertical-align: middle;
   margin-left: 5px;
 }
 
-/* Four columns */
+/* Five-column layout */
 
 .event-details-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
   width: 100%;
 }
 
+/* Individual detail */
+
 .event-detail {
-  min-height: 105px;
+  min-height: 135px;
   box-sizing: border-box;
 
   display: flex;
@@ -66,7 +68,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 12px 15px;
+  padding: 15px 12px;
   border-right: 1px solid rgba(35, 30, 25, 0.3);
 }
 
@@ -74,80 +76,162 @@
   border-right: none;
 }
 
-/* Outline icons */
+/* Icons */
 
-.event-detail svg {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 9px;
+.event-detail svg,
+.event-detail-rupee {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 12px;
   color: #211710;
+}
+
+.event-detail-rupee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 600;
 }
 
 /* Labels */
 
 .event-detail h3 {
   font-family: Georgia, serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
 
   color: #211710;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
 }
 
 /* Information */
 
 .event-detail p {
   font-family: Georgia, serif;
-  font-size: 13px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.7;
 
   color: #40352D;
   margin: 0;
 }
 
+.fee-discount {
+  font-size: 12px;
+  line-height: 1.5;
+  display: inline-block;
+  margin-top: 3px;
+}
+
 /* =================================
-   TABLET AND MOBILE
+   TABLET
+================================= */
+
+@media (max-width: 1000px) and (min-width: 769px) {
+
+  .event-details-section {
+    padding: 35px 3%;
+  }
+
+  .event-detail {
+    padding: 12px 7px;
+  }
+
+  .event-detail h3 {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .event-detail p {
+    font-size: 13px;
+  }
+
+  .fee-discount {
+    font-size: 11px;
+  }
+}
+
+/* =================================
+   MOBILE
 ================================= */
 
 @media (max-width: 768px) {
 
   .event-details-section {
     min-height: 0;
-    padding: 45px 9%;
+    padding: 45px 8%;
 
     background-size: cover;
     background-position: center;
   }
 
   .event-details-heading {
-    font-size: 26px;
-    margin-bottom: 22px;
+    font-size: 30px;
+    margin-bottom: 25px;
   }
 
   .event-details-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .event-detail {
-    min-height: 120px;
+    min-height: 125px;
     padding: 18px 8px;
+
     border-right: none;
     border-bottom: 1px solid rgba(35, 30, 25, 0.3);
   }
 
+  /* Vertical dividers for left column */
   .event-detail:nth-child(odd) {
     border-right: 1px solid rgba(35, 30, 25, 0.3);
   }
 
-  .event-detail:nth-child(3),
-  .event-detail:nth-child(4) {
+  /* Last item gets its own centered row */
+  .event-detail:last-child {
+    grid-column: 1 / -1;
+    border-right: none;
     border-bottom: none;
   }
 
-  .event-detail svg {
-    width: 28px;
-    height: 28px;
+  .event-detail svg,
+  .event-detail-rupee {
+    width: 34px;
+    height: 34px;
+    margin-bottom: 10px;
+  }
+
+  .event-detail-rupee {
+    font-size: 32px;
+  }
+
+  .event-detail h3 {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .event-detail p {
+    font-size: 13px;
+  }
+
+  .fee-discount {
+    font-size: 11px;
+  }
+}
+
+/* Smaller phones */
+
+@media (max-width: 380px) {
+
+  .event-details-section {
+    padding: 35px 6%;
+  }
+
+  .event-details-heading {
+    font-size: 25px;
   }
 
   .event-detail h3 {
@@ -157,90 +241,132 @@
   .event-detail p {
     font-size: 11px;
   }
-}
 
-@media (max-width: 380px) {
-  .event-details-section {
-    padding: 35px 6%;
-  }
-
-  .event-details-heading {
-    font-size: 22px;
-  }
-
-  .event-detail p {
+  .fee-discount {
     font-size: 10px;
   }
 }
 
 
 /* =================================
-   INCREASE EVENT DETAILS TYPOGRAPHY
+   EVENT DETAILS FINAL ADJUSTMENTS
 ================================= */
 
-.event-details-heading {
-  font-size: clamp(38px, 3.2vw, 48px);
-  letter-spacing: 3px;
-  margin-bottom: 38px;
+/* Bring all five blocks closer */
+.event-details-content {
+  max-width: 1300px;
 }
 
-.event-details-heading span {
-  font-size: 25px;
+.event-details-grid {
+  width: 100%;
+  margin: 0 auto;
 }
+
+/* Make headings bolder */
+.event-detail h3 {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* Make information bolder */
+.event-detail p {
+  font-size: 15px;
+  font-weight: 700;
+  color: #211710;
+}
+
+/* Registration fee text */
+.fee-discount {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Slightly reduce internal spacing */
+.event-detail {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Keep mobile typography balanced */
+@media (max-width: 768px) {
+  .event-details-content {
+    max-width: 100%;
+  }
+
+  .event-detail h3 {
+    font-size: 13px;
+  }
+
+  .event-detail p {
+    font-size: 13px;
+  }
+
+  .fee-discount {
+    font-size: 11px;
+  }
+}
+
+/* =================================
+   EVENT DETAILS HOVER EFFECT
+================================= */
 
 .event-detail {
-  min-height: 135px;
-  padding: 15px 18px;
+  position: relative;
+  border-radius: 12px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+  cursor: default;
 }
 
-.event-detail svg {
-  width: 42px;
-  height: 42px;
-  margin-bottom: 12px;
+/* Smooth pop-up and glow */
+.event-detail:hover {
+  transform: translateY(-9px);
+
+  background: rgba(255, 245, 230, 0.35);
+
+  box-shadow:
+    0 10px 25px rgba(80, 25, 15, 0.16),
+    0 0 15px rgba(167, 25, 37, 0.16);
 }
 
+/* Icons glow */
+.event-detail svg,
+.event-detail-icon {
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.event-detail:hover svg,
+.event-detail:hover .event-detail-icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 6px rgba(167, 25, 37, 0.5));
+}
+
+/* Heading gets a crimson accent */
 .event-detail h3 {
-  font-size: 17px;
-  letter-spacing: 2.5px;
-  margin-bottom: 10px;
+  transition: color 0.3s ease;
 }
 
+.event-detail:hover h3 {
+  color: #A71925;
+}
+
+/* Information gets a subtle emphasis */
 .event-detail p {
-  font-size: 17px;
-  line-height: 1.7;
+  transition: text-shadow 0.3s ease;
 }
 
-/* Tablet and mobile */
-@media (max-width: 768px) {
-  .event-details-heading {
-    font-size: 30px;
-    margin-bottom: 25px;
-  }
-
-  .event-detail svg {
-    width: 34px;
-    height: 34px;
-  }
-
-  .event-detail h3 {
-    font-size: 14px;
-  }
-
-  .event-detail p {
-    font-size: 14px;
-  }
+.event-detail:hover p {
+  text-shadow: 0 0 8px rgba(167, 25, 37, 0.2);
 }
 
-@media (max-width: 380px) {
-  .event-details-heading {
-    font-size: 25px;
-  }
-
-  .event-detail h3 {
-    font-size: 12px;
-  }
-
-  .event-detail p {
-    font-size: 12px;
+/* Touch feedback */
+@media (hover: none) {
+  .event-detail:active {
+    transform: scale(0.97);
   }
 }
