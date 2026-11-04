@@ -5,6 +5,12 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
 
+      <div className="registration-announcement">
+        <span>✦</span>
+          REGISTRATION STARTS FROM 6th NOVEMBER 2026
+       <span>✦</span>
+      </div>
+
 
       <div className="hero-content">
 

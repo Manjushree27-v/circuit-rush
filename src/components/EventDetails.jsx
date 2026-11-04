@@ -26,7 +26,7 @@ const EventDetails = () => {
                 strokeLinecap="round" />
             </svg>
             <h3>DATE</h3>
-            <p>21 November 2026</p>
+            <p>24th November 2026</p>
           </div>
 
           {/* VENUE */}

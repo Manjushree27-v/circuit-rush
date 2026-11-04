@@ -236,3 +236,33 @@
 
 }
 
+.registration-announcement {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 88%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  padding: 9px 15px;
+
+  background: rgba(245, 227, 206, 0.95);
+  border: 1px solid rgba(75, 43, 29, 0.25);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+
+  color: #A71925;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+
+  z-index: 999;
+}

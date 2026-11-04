@@ -1,0 +1,206 @@
+
+/* =================================
+   RULES SECTION
+================================= */
+
+.rules-section {
+  width: 100%;
+  padding: 85px 7%;
+  box-sizing: border-box;
+
+  background-image: url("/assets/backgrounds/rounds-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #211710;
+}
+
+.rules-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Heading */
+
+.rules-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.rules-heading > span {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #77736D;
+}
+
+.rules-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: 3px;
+  margin: 12px 0;
+}
+
+.rules-heading h2 span {
+  color: #A71925;
+}
+
+.rules-divider {
+  color: #A71925;
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.rules-heading p {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Rulebook card */
+
+.rules-card {
+  max-width: 650px;
+  margin: auto;
+  padding: 45px 35px;
+
+  text-align: center;
+
+  background: rgba(255, 248, 237, 0.8);
+  border: 1px solid rgba(75, 43, 29, 0.35);
+  border-bottom: 5px solid #211710;
+
+  box-shadow: 0 8px 25px rgba(33, 23, 16, 0.12);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rules-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(33, 23, 16, 0.2);
+}
+
+.rules-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.rules-card h3 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 10px 0 15px;
+}
+
+.rules-card p {
+  max-width: 500px;
+  margin: 0 auto 28px;
+
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #514238;
+}
+
+/* Button */
+
+.rules-button {
+  display: inline-block;
+  padding: 15px 32px;
+
+  background: #211710;
+  color: #F5E3CE;
+
+  border: 1px solid #211710;
+
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.rules-button:hover {
+  background: #A71925;
+  border-color: #A71925;
+  transform: translateY(-3px);
+}
+
+.rules-button span {
+  margin-left: 8px;
+}
+
+/* Footer note */
+
+.rules-note {
+  display: block;
+  margin-top: 25px;
+
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #77736D;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .rules-section {
+    padding: 60px 6%;
+  }
+
+  .rules-heading h2 {
+    font-size: 29px;
+  }
+
+  .rules-card {
+    padding: 35px 20px;
+  }
+
+  .rules-card h3 {
+    font-size: 20px;
+  }
+
+  .rules-card p {
+    font-size: 13px;
+  }
+
+  .rules-button {
+    padding: 14px 24px;
+    font-size: 11px;
+  }
+}
+
+
+.rules-important-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  max-width: 950px;
+  margin: 25px auto 45px;
+  padding: 16px 22px;
+
+  background: rgba(167, 25, 37, 0.09);
+  border: 1px solid rgba(167, 25, 37, 0.45);
+  border-left: 4px solid #A71925;
+  border-right: 4px solid #A71925;
+
+  color: #A71925;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.rules-important-note span {
+  color: #A71925;
+  font-size: 18px;
+}

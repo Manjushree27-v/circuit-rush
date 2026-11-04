@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../styles/Organisers.css";
 
@@ -23,10 +24,14 @@ const organisations = [
 const organisers = [
   {
     name: "RAHUL R GOWDA",
+    position: "Chair",
+    organisation: "IEEE Student Branch",
     phone: "+91 97433 43601",
   },
   {
-    name: "PREETHAM",
+    name: "PREETHAM S",
+    position: "Technical Lead",
+    organisation: "Circuit Rush",
     phone: "+91 90191 61004",
   },
 ];
@@ -67,6 +72,14 @@ const Organisers = () => {
           {organisers.map((org, index) => (
             <div className="organiser-card" key={index}>
               <h3>{org.name}</h3>
+
+              <p className="organiser-position">
+                {org.position}
+              </p>
+
+              <p className="organiser-organisation">
+                {org.organisation}
+              </p>
 
               <a href={`tel:${org.phone}`}>
                 CONTACT

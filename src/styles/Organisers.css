@@ -327,3 +327,26 @@
   font-size: 20px;
   letter-spacing: 1px;
 }
+
+/* Organiser designation */
+.organiser-position {
+  font-size: 15px;
+  font-weight: 700;
+  color: #A71925;
+  letter-spacing: 1px;
+  margin: 8px 0 2px;
+  white-space: nowrap;
+}
+
+/* Organisation below designation */
+.organiser-organisation {
+  font-size: 14px;
+  font-weight: 600;
+  color: #F5E3CE;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+}
+
+.organiser-position {
+  color: #C6A15B;
+}

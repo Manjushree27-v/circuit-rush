@@ -86,6 +86,7 @@ const Navbar = () => {
           <a href="#prizes" onClick={handleSmoothScroll}>PRIZES</a>
           <a href="#rules" onClick={handleSmoothScroll}>RULES</a>
           <a href="#faq" onClick={handleSmoothScroll}>FAQ</a>
+          <a href="#organisers" onClick={handleSmoothScroll}>CONTACT</a>
         </div>
 
         <a
