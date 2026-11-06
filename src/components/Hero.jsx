@@ -7,7 +7,7 @@ const Hero = () => {
 
       <div className="registration-announcement">
         <span>✦</span>
-          REGISTRATION STARTS FROM 6th NOVEMBER 2026
+          REGISTRATION STARTS FROM 11th NOVEMBER 2026
        <span>✦</span>
       </div>
 

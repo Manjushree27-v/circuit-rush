@@ -11,7 +11,7 @@ const faqData = [
   {
     question: "What is the registration fee?",
     answer:
-      "The registration fee is ₹200 per team. Teams consisting of IEEE members can avail a discounted fee of ₹150.",
+       "The registration fee is ₹200 per team. A discounted fee of ₹150 per team is applicable only if BOTH team members hold valid IEEE membership.",
   },
   {
     question: "Will food be provided during the event?",

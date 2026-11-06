@@ -31,7 +31,7 @@ const Rules = () => {
           </p>
 
           <a
-            href="/assets/documents/Circuit Rush RuleBook.pdf"
+            href="/assets/documents/CIRCUIT RUSH Rule book.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="rules-button"
