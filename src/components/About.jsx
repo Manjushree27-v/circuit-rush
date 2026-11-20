@@ -54,7 +54,7 @@ const About = () => {
               />
             </svg>
 
-            <h3>50</h3>
+            <h3>55</h3>
             <p>TEAMS</p>
           </div>
 

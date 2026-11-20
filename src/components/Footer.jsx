@@ -19,7 +19,7 @@ const Footer = () => {
   rel="noopener noreferrer"
   className="footer-register-btn"
 >
-  REGISTER NOW <span></span>
+  REGISTRATIONS CLOSED <span></span>
 </a>
 
           <div className="footer-cta-tagline">

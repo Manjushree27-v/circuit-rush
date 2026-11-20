@@ -95,7 +95,7 @@ const Navbar = () => {
   rel="noopener noreferrer"
   className="navbar-register"
 >
-  REGISTER NOW <span></span>
+  REGISTRATIONS CLOSED <span></span>
 </a>
       </div>
 

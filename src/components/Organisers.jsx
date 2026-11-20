@@ -65,7 +65,7 @@ const Organisers = () => {
         {/* Sponsors Section */}
         <div className="sponsors-section">
           <div className="sponsors-heading">
-            <h3>SPONSORED BY</h3>
+            <h3>PRIZE POLL SPONSORED BY</h3>
             <div className="sponsors-divider">
               <span></span>
             </div>

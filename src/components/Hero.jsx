@@ -34,7 +34,7 @@ const Hero = () => {
   rel="noopener noreferrer"
   className="hero-register"
 >
-  REGISTER NOW <span></span>
+  REGISTRATIONS CLOSED <span></span>
 </a>
 
         <div className="hero-highlights">
