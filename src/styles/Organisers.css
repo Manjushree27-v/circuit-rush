@@ -350,3 +350,97 @@
 .organiser-position {
   color: #C6A15B;
 }
+
+/* =========================================
+   SPONSORED BY SECTION
+========================================= */
+
+.sponsors-section {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 75px;
+}
+
+.sponsors-heading {
+  margin-bottom: 28px;
+}
+
+.sponsors-heading h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  letter-spacing: 4px;
+  margin: 0;
+  color: #211710;
+}
+
+/* Decorative Divider */
+
+.sponsors-divider {
+  width: 45%;
+  height: 1px;
+  background: rgba(35, 30, 25, 0.35);
+  margin: 18px auto 0;
+  position: relative;
+}
+
+.sponsors-divider span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #A71925;
+  transform: rotate(45deg);
+  top: -4px;
+  left: 50%;
+}
+
+/* Sponsor Logo Card */
+
+.sponsor-card {
+  width: 280px;
+  min-height: 125px;
+  padding: 18px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 248, 235, 0.72);
+  border: 1px solid rgba(55, 35, 25, 0.4);
+
+  box-shadow: 0 4px 12px rgba(40, 25, 15, 0.08);
+
+  transition: transform 0.3s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-4px);
+}
+
+.sponsor-card img {
+  max-width: 90%;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .sponsors-heading h3 {
+    font-size: 23px;
+    letter-spacing: 3px;
+  }
+
+  .sponsors-divider {
+    width: 65%;
+  }
+
+  .sponsor-card {
+    width: 240px;
+    min-height: 110px;
+  }
+}

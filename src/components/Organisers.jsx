@@ -62,6 +62,23 @@ const Organisers = () => {
           ))}
         </div>
 
+        {/* Sponsors Section */}
+        <div className="sponsors-section">
+          <div className="sponsors-heading">
+            <h3>SPONSORED BY</h3>
+            <div className="sponsors-divider">
+              <span></span>
+            </div>
+          </div>
+
+          <div className="sponsor-card">
+            <img
+              src="/assets/sponsors/sponsor.jpeg"
+              alt="Circuit Rush Sponsor"
+            />
+          </div>
+        </div>
+
         {/* Contact Details */}
         <div className="organisers-contact-heading">
           <h3>GET IN TOUCH</h3>
